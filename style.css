@@ -1,62 +1,100 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Gill Sans MT, sans-serif, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 50vh;
     margin: 0;
-    background-color: #f0f0f0;
+    background-image: url(fire2.gif);
   }
 
   .calendario {
-    border: 1px solid #ccc;
+    border: 10px solid #990000;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: white;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgb(255, 222, 200);
     width: 340px;
   }
   
   .calendario-topo {
-    background-color: #4a90e2;
-    color: white;
+    background-color: #990000;
+    color: rgb(255, 210, 192);
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     font-weight: bold;
   }
   
+  .botoes-navegacao {
+    background-color: #990000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .botoes-navegacao button {
+    background: none;
+    border: 10px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(255, 210, 192);
+    display: flex;
+    align-items: center;
+  }
+  
+  .seta-esquerda::before {
+    content: "\2039";
+    font-size: 1.5em;
+    margin-right: 5px;
+  }
+  
+  .seta-direita::after {
+    content: "\203A";
+    font-size: 1.5em;
+    margin-left: 5px;
+  }
+
+  .botoes-navegacao button span {
+      display: none;
+  }
+  
+  .botoes-navegacao button {
+      width: auto;
+  }
+
   table {
     width: 100%;
     border-collapse: collapse;
   }
 
   th {
-    background-color: #f4f4f4;
+    background-color: #ffebeb;
     padding: 10px;
     text-transform: uppercase;
     font-size: 0.8em;
-    color: #666;
+    color: #381c64;
   }
   
   td {
     text-align: center;
     padding: 10px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #923131;
     transition: background-color 0.3s ease;
   }
   
   td:hover {
-    background-color: #e6f2ff;
+    background-color: #ffa8a8;
     cursor: pointer;
   }
   
   .dia-atual {
-    background-color: #4a90e2;
+    background-color: #990000;
     color: white;
     font-weight: bold;
-    border-radius: 50%;
   }
   
   .fim-de-semana {
-    color: #888;
+    color: #6d6d6d;
   }

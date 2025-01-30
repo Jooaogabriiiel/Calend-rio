@@ -2,20 +2,24 @@
 <html lang="PT-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" 
-    content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendário</title>
     <link rel="stylesheet" href="style.css">
-    <body>
-        <script src="script.js"></script>
+</head>
+<body>
     <div class="calendario">
         <div class="calendario-topo" id="mes-ano">
-            <button onclick="mesAnterior()">&#10094;</button>
             <h1 id="mes"></h1>
-            <button onclick="mesSeguinte()">&#10095;</button>
         </div>
-            <table>
-                <thead>
+        <div class="botoes-navegacao">
+            <button id="btn-anterior">
+                <span class="seta-esquerda"></span>Mês Anterior</button>
+            <span id="mes-ano"></span>
+            <button id="btn-proximo">
+                Próximo Mês<span class="seta-direita"></span></button>
+        </div>
+        <table>
+            <thead>
                 <tr>
                     <th>Dom</th>
                     <th>Seg</th>
@@ -25,11 +29,11 @@
                     <th>Sex</th>
                     <th>Sáb</th>
                 </tr>
-                </thead>
-                <tbody id="dias-corpo"
+            </thead>
+            <tbody id="dias-corpo">
             </tbody>
         </table>
     </div>
-    </body>
-    </head>
+    <script src="script.js"></script>
+</body>
 </html>
